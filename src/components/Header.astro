@@ -1,11 +1,35 @@
 ---
 ---
-<header class="sticky top-0 z-50 border-b border-surface-200 bg-surface-50/80 backdrop-blur-lg">
+<header class="sticky top-0 z-50 border-b backdrop-blur-lg" style="background-color: oklch(0.97 0.015 75 / 0.88); border-color: oklch(0.89 0.018 75);">
   <nav class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-16 flex items-center justify-between">
-    <a href="/" class="text-lg font-bold tracking-tight text-surface-900 font-display">Your New Business</a>
-    <div class="flex items-center gap-6">
-      <a href="/blog" class="text-sm font-medium text-surface-800/60 hover:text-surface-900 transition-colors">Blog</a>
-      <a href="#cta" class="text-sm font-semibold bg-brand-500 text-white px-4 py-2 rounded-lg hover:bg-brand-600 transition-colors">Get Started</a>
+
+    <!-- Logo -->
+    <a href="/" class="flex items-center gap-2 group">
+      <!-- Tiny home icon -->
+      <svg class="w-7 h-7 shrink-0" viewBox="0 0 28 28" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <path d="M4 13L14 4l10 9" stroke="oklch(0.42 0.13 145)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+        <path d="M6 11.5V22a1 1 0 0 0 1 1h4.5v-4.5a2.5 2.5 0 0 1 5 0V23H21a1 1 0 0 0 1-1V11.5" stroke="oklch(0.42 0.13 145)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+      </svg>
+      <span class="text-xl font-bold tracking-tight font-display text-surface-900">
+        Nestled
+      </span>
+    </a>
+
+    <!-- Nav links -->
+    <div class="hidden md:flex items-center gap-7">
+      <a href="#guides" class="text-sm font-medium text-surface-800/65 hover:text-surface-900 transition-colors duration-150">Guides</a>
+      <a href="#guides" class="text-sm font-medium text-surface-800/65 hover:text-surface-900 transition-colors duration-150">Zoning</a>
+      <a href="#guides" class="text-sm font-medium text-surface-800/65 hover:text-surface-900 transition-colors duration-150">Financing</a>
+      <a href="#guides" class="text-sm font-medium text-surface-800/65 hover:text-surface-900 transition-colors duration-150">Builders</a>
     </div>
+
+    <!-- CTA -->
+    <a href="#guides"
+       class="text-sm font-semibold px-5 py-2.5 rounded-lg text-white transition-colors duration-150"
+       style="background-color: oklch(0.42 0.13 145);"
+       onmouseover="this.style.backgroundColor='oklch(0.34 0.11 145)'"
+       onmouseout="this.style.backgroundColor='oklch(0.42 0.13 145)'">
+      Start exploring
+    </a>
   </nav>
 </header>

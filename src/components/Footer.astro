@@ -1,11 +1,66 @@
 ---
 const year = new Date().getFullYear();
 ---
-<footer class="border-t border-surface-200 py-10 mt-auto">
-  <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-    <div class="flex flex-col md:flex-row md:items-center md:justify-between gap-4">
-      <p class="text-sm font-semibold text-surface-900 font-display">Your New Business</p>
-      <p class="text-sm text-surface-800/50">&copy; {year} Your New Business. All rights reserved.</p>
+<footer class="border-t mt-auto" style="background-color: oklch(0.20 0.018 75); border-color: oklch(0.28 0.02 75);">
+  <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-14">
+
+    <!-- Top row: brand + nav columns -->
+    <div class="grid grid-cols-1 md:grid-cols-4 gap-10 mb-12">
+
+      <!-- Brand -->
+      <div class="md:col-span-1">
+        <a href="/" class="flex items-center gap-2 mb-4">
+          <svg class="w-6 h-6 shrink-0" viewBox="0 0 28 28" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path d="M4 13L14 4l10 9" stroke="oklch(0.55 0.13 145)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+            <path d="M6 11.5V22a1 1 0 0 0 1 1h4.5v-4.5a2.5 2.5 0 0 1 5 0V23H21a1 1 0 0 0 1-1V11.5" stroke="oklch(0.55 0.13 145)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+          </svg>
+          <span class="text-lg font-bold font-display text-white">Nestled</span>
+        </a>
+        <p class="text-sm leading-relaxed" style="color: oklch(0.60 0.01 75);">
+          Your guide to living small, living well. Practical, honest information for every stage of the tiny home journey.
+        </p>
+      </div>
+
+      <!-- Topics -->
+      <div>
+        <h5 class="text-xs font-semibold uppercase tracking-widest mb-4" style="color: oklch(0.55 0.13 145);">Topics</h5>
+        <ul class="space-y-3">
+          <li><a href="#" class="text-sm transition-colors duration-150 hover:text-white" style="color: oklch(0.60 0.01 75);">Tiny Home Costs</a></li>
+          <li><a href="#" class="text-sm transition-colors duration-150 hover:text-white" style="color: oklch(0.60 0.01 75);">Zoning by State</a></li>
+          <li><a href="#" class="text-sm transition-colors duration-150 hover:text-white" style="color: oklch(0.60 0.01 75);">Financing Options</a></li>
+          <li><a href="#" class="text-sm transition-colors duration-150 hover:text-white" style="color: oklch(0.60 0.01 75);">Builder Reviews</a></li>
+          <li><a href="#" class="text-sm transition-colors duration-150 hover:text-white" style="color: oklch(0.60 0.01 75);">Small Space Living</a></li>
+        </ul>
+      </div>
+
+      <!-- Guides -->
+      <div>
+        <h5 class="text-xs font-semibold uppercase tracking-widest mb-4" style="color: oklch(0.55 0.13 145);">Popular Guides</h5>
+        <ul class="space-y-3">
+          <li><a href="#" class="text-sm transition-colors duration-150 hover:text-white" style="color: oklch(0.60 0.01 75);">Is a tiny home right for me?</a></li>
+          <li><a href="#" class="text-sm transition-colors duration-150 hover:text-white" style="color: oklch(0.60 0.01 75);">THOW vs. Foundation</a></li>
+          <li><a href="#" class="text-sm transition-colors duration-150 hover:text-white" style="color: oklch(0.60 0.01 75);">Best tiny home loans</a></li>
+          <li><a href="#" class="text-sm transition-colors duration-150 hover:text-white" style="color: oklch(0.60 0.01 75);">2025 cost breakdown</a></li>
+        </ul>
+      </div>
+
+      <!-- About -->
+      <div>
+        <h5 class="text-xs font-semibold uppercase tracking-widest mb-4" style="color: oklch(0.55 0.13 145);">About</h5>
+        <ul class="space-y-3">
+          <li><a href="#" class="text-sm transition-colors duration-150 hover:text-white" style="color: oklch(0.60 0.01 75);">Our editorial standards</a></li>
+          <li><a href="#" class="text-sm transition-colors duration-150 hover:text-white" style="color: oklch(0.60 0.01 75);">Contact us</a></li>
+          <li><a href="#" class="text-sm transition-colors duration-150 hover:text-white" style="color: oklch(0.60 0.01 75);">Privacy policy</a></li>
+        </ul>
+      </div>
+
     </div>
+
+    <!-- Bottom row -->
+    <div class="border-t pt-8 flex flex-col md:flex-row items-center md:justify-between gap-3" style="border-color: oklch(0.28 0.02 75);">
+      <p class="text-sm" style="color: oklch(0.45 0.01 75);">&copy; {year} Nestled. All rights reserved.</p>
+      <p class="text-xs" style="color: oklch(0.38 0.01 75);">Built for people who want real answers about tiny home living.</p>
+    </div>
+
   </div>
 </footer>

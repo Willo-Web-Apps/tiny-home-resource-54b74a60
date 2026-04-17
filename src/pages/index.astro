@@ -1,35 +1,437 @@
 ---
 import Base from '../layouts/Base.astro';
 ---
-<Base title="Your New Business" description="A resource for all things tiny homes.">
-  <!-- Hero — the Product Agent will replace this entire page -->
-  <section class="relative min-h-[80vh] flex items-center overflow-hidden">
-    <div class="absolute inset-0 bg-gradient-to-br from-brand-500/5 via-surface-50 to-brand-500/10"></div>
-    <div class="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-20 md:py-28 text-center">
-      <h1 class="text-4xl md:text-5xl lg:text-7xl font-extrabold tracking-tight text-surface-900 font-display max-w-4xl mx-auto leading-[1.1] animate-slide-up">
-        Your New Business
-      </h1>
-      <p class="mt-6 text-lg md:text-xl text-surface-800/60 max-w-2xl mx-auto leading-relaxed animate-slide-up delay-100">
-        A resource for all things tiny homes.
-      </p>
-      <div class="mt-10 animate-slide-up delay-200">
-        <a href="#cta" class="inline-block px-8 py-3.5 bg-brand-500 text-white font-semibold rounded-lg hover:bg-brand-600 transition-colors text-base">
-          Get Started
+<Base
+  title="Nestled — Everything you need to live in a tiny home"
+  description="Honest guides on tiny home zoning, financing, builders, and costs — so you can make the move with confidence."
+>
+
+  <!-- ═══════════════════════════════════════════════════════
+       HERO
+  ════════════════════════════════════════════════════════════ -->
+  <section class="relative min-h-[88vh] flex items-center overflow-hidden">
+    <!-- Layered CSS gradient background — warm linen with forest green & terracotta glows -->
+    <div class="absolute inset-0" style="background:
+      radial-gradient(ellipse at 15% 60%, oklch(0.42 0.13 145 / 0.08), transparent 55%),
+      radial-gradient(ellipse at 85% 20%, oklch(0.58 0.15 40 / 0.07), transparent 48%),
+      radial-gradient(ellipse at 50% 100%, oklch(0.42 0.13 145 / 0.05), transparent 60%),
+      linear-gradient(160deg, oklch(0.97 0.015 75) 0%, oklch(0.94 0.018 75) 100%);
+    "></div>
+
+    <!-- Subtle texture overlay lines (decorative) -->
+    <div class="absolute inset-0 opacity-[0.025]" style="background-image: repeating-linear-gradient(0deg, oklch(0.20 0.018 75) 0px, transparent 1px, transparent 48px);"></div>
+
+    <div class="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-24 md:py-32">
+      <div class="max-w-3xl">
+        <!-- Eyebrow -->
+        <p class="inline-flex items-center gap-2 text-sm font-semibold uppercase tracking-widest text-accent-500 mb-6 animate-slide-up" style="color: oklch(0.58 0.15 40);">
+          <span class="w-6 h-px bg-current inline-block"></span>
+          Your guide to living small, living well
+        </p>
+
+        <!-- H1 — seed headline -->
+        <h1 class="text-5xl md:text-6xl lg:text-[5.25rem] font-bold tracking-tight font-display leading-[1.08] text-surface-900 animate-slide-up delay-100">
+          Everything you need<br>
+          <em class="not-italic" style="color: oklch(0.42 0.13 145);">to live in a tiny home</em>
+        </h1>
+
+        <!-- Sub — seed sub verbatim, tightened -->
+        <p class="mt-7 text-lg md:text-xl leading-relaxed text-surface-800/70 max-w-xl animate-slide-up delay-200">
+          Honest guides on zoning, financing, builders, and costs — so you can make the move with confidence.
+        </p>
+
+        <!-- CTAs -->
+        <div class="mt-10 flex flex-col sm:flex-row gap-4 animate-slide-up delay-300">
+          <a href="#guides"
+             class="inline-block px-8 py-4 rounded-xl font-semibold text-base text-white transition-colors duration-150"
+             style="background-color: oklch(0.42 0.13 145);"
+             onmouseover="this.style.backgroundColor='oklch(0.34 0.11 145)'"
+             onmouseout="this.style.backgroundColor='oklch(0.42 0.13 145)'">
+            Start exploring guides
+          </a>
+          <a href="#how-it-works"
+             class="inline-block px-8 py-4 rounded-xl font-semibold text-base border-2 transition-colors duration-150 text-surface-900"
+             style="border-color: oklch(0.89 0.018 75); background: transparent;"
+             onmouseover="this.style.backgroundColor='oklch(0.94 0.018 75)'"
+             onmouseout="this.style.backgroundColor='transparent'">
+            How Nestled works
+          </a>
+        </div>
+
+        <!-- Micro proof -->
+        <p class="mt-5 text-sm text-surface-800/45 animate-slide-up delay-400">
+          Free to browse. No sign-up required.
+        </p>
+      </div>
+
+      <!-- Floating stat cards — right side on large screens -->
+      <div class="hidden lg:flex flex-col gap-4 absolute right-8 top-1/2 -translate-y-1/2 animate-fade-in delay-500">
+        <div class="rounded-2xl px-6 py-5 shadow-sm border" style="background: oklch(0.97 0.015 75 / 0.95); border-color: oklch(0.89 0.018 75);">
+          <p class="text-3xl font-bold font-display" style="color: oklch(0.42 0.13 145);">200+</p>
+          <p class="text-sm text-surface-800/60 mt-0.5">in-depth guides</p>
+        </div>
+        <div class="rounded-2xl px-6 py-5 shadow-sm border" style="background: oklch(0.97 0.015 75 / 0.95); border-color: oklch(0.89 0.018 75);">
+          <p class="text-3xl font-bold font-display" style="color: oklch(0.58 0.15 40);">50 states</p>
+          <p class="text-sm text-surface-800/60 mt-0.5">zoning coverage</p>
+        </div>
+        <div class="rounded-2xl px-6 py-5 shadow-sm border" style="background: oklch(0.97 0.015 75 / 0.95); border-color: oklch(0.89 0.018 75);">
+          <p class="text-3xl font-bold font-display" style="color: oklch(0.42 0.13 145);">84k+</p>
+          <p class="text-sm text-surface-800/60 mt-0.5">readers monthly</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ═══════════════════════════════════════════════════════
+       SOCIAL PROOF BAR
+  ════════════════════════════════════════════════════════════ -->
+  <section style="background-color: oklch(0.42 0.13 145);">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-10">
+      <div class="grid grid-cols-2 md:grid-cols-4 gap-8 text-center">
+        <div>
+          <p class="text-3xl font-bold font-display text-white">84,000+</p>
+          <p class="text-sm text-white/65 mt-1">monthly readers</p>
+        </div>
+        <div>
+          <p class="text-3xl font-bold font-display text-white">200+</p>
+          <p class="text-sm text-white/65 mt-1">research guides</p>
+        </div>
+        <div>
+          <p class="text-3xl font-bold font-display text-white">50 states</p>
+          <p class="text-sm text-white/65 mt-1">zoning data covered</p>
+        </div>
+        <div>
+          <p class="text-3xl font-bold font-display text-white">4.8 / 5</p>
+          <p class="text-sm text-white/65 mt-1">reader trust score</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ═══════════════════════════════════════════════════════
+       FEATURES / TOPIC GRID
+  ════════════════════════════════════════════════════════════ -->
+  <section id="guides" class="py-20 md:py-28 lg:py-32" style="background-color: oklch(0.97 0.015 75);">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+
+      <!-- Section header -->
+      <div class="max-w-2xl mb-14 animate-slide-up">
+        <p class="text-sm font-semibold uppercase tracking-widest mb-3" style="color: oklch(0.58 0.15 40);">What you'll find</p>
+        <h2 class="text-3xl md:text-4xl font-bold tracking-tight font-display text-surface-900">
+          Real answers to the questions<br>everyone skips
+        </h2>
+        <p class="mt-4 text-lg leading-relaxed text-surface-800/60">
+          Most tiny home content is either a Pinterest fantasy or a 10-year-old forum post. Nestled covers what actually matters, written by people who've been through it.
+        </p>
+      </div>
+
+      <!-- Cards grid -->
+      <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
+
+        <!-- Card 1: Zoning -->
+        <div class="group rounded-2xl p-7 border transition-all duration-200 hover:-translate-y-1 hover:shadow-md animate-slide-up delay-100"
+             style="background-color: oklch(0.94 0.018 75); border-color: oklch(0.89 0.018 75);">
+          <div class="w-11 h-11 rounded-xl flex items-center justify-center mb-5" style="background-color: oklch(0.86 0.07 145);">
+            <svg xmlns="http://www.w3.org/2000/svg" class="w-6 h-6" fill="none" viewBox="0 0 24 24" stroke-width="1.8" style="color: oklch(0.42 0.13 145);" stroke="currentColor">
+              <path stroke-linecap="round" stroke-linejoin="round" d="M9 6.75V15m6-6v8.25m.503-10.498 4.875 2.437M21 12a9 9 0 1 1-18 0 9 9 0 0 1 18 0Z" />
+            </svg>
+          </div>
+          <h3 class="text-lg font-bold font-display text-surface-900 mb-2">Zoning & Legal</h3>
+          <p class="text-sm leading-relaxed text-surface-800/65">
+            Find out exactly where you can park or build in your state — and what permits you'll actually need before you buy.
+          </p>
+          <p class="mt-4 text-sm font-semibold" style="color: oklch(0.42 0.13 145);">Explore zoning guides →</p>
+        </div>
+
+        <!-- Card 2: Financing -->
+        <div class="group rounded-2xl p-7 border transition-all duration-200 hover:-translate-y-1 hover:shadow-md animate-slide-up delay-200"
+             style="background-color: oklch(0.94 0.018 75); border-color: oklch(0.89 0.018 75);">
+          <div class="w-11 h-11 rounded-xl flex items-center justify-center mb-5" style="background-color: oklch(0.86 0.07 145);">
+            <svg xmlns="http://www.w3.org/2000/svg" class="w-6 h-6" fill="none" viewBox="0 0 24 24" stroke-width="1.8" style="color: oklch(0.42 0.13 145);" stroke="currentColor">
+              <path stroke-linecap="round" stroke-linejoin="round" d="M2.25 18.75a60.07 60.07 0 0 1 15.797 2.101c.727.198 1.453-.342 1.453-1.096V18.75M3.75 4.5v.75A.75.75 0 0 1 3 6h-.75m0 0v-.375c0-.621.504-1.125 1.125-1.125H20.25M2.25 6v9m18-10.5v.75c0 .414.336.75.75.75h.75m-1.5-1.5h.375c.621 0 1.125.504 1.125 1.125v9.75c0 .621-.504 1.125-1.125 1.125h-.375m1.5-1.5H21a.75.75 0 0 0-.75.75v.75m0 0H3.75m0 0h-.375a1.125 1.125 0 0 1-1.125-1.125V15m1.5 1.5v-.75A.75.75 0 0 0 3 15h-.75" />
+            </svg>
+          </div>
+          <h3 class="text-lg font-bold font-display text-surface-900 mb-2">Financing</h3>
+          <p class="text-sm leading-relaxed text-surface-800/65">
+            Personal loans, RV loans, USDA programs — we break down every real financing option for tiny homes and who qualifies.
+          </p>
+          <p class="mt-4 text-sm font-semibold" style="color: oklch(0.42 0.13 145);">Explore financing →</p>
+        </div>
+
+        <!-- Card 3: Builders -->
+        <div class="group rounded-2xl p-7 border transition-all duration-200 hover:-translate-y-1 hover:shadow-md animate-slide-up delay-300"
+             style="background-color: oklch(0.94 0.018 75); border-color: oklch(0.89 0.018 75);">
+          <div class="w-11 h-11 rounded-xl flex items-center justify-center mb-5" style="background-color: oklch(0.86 0.07 145);">
+            <svg xmlns="http://www.w3.org/2000/svg" class="w-6 h-6" fill="none" viewBox="0 0 24 24" stroke-width="1.8" style="color: oklch(0.42 0.13 145);" stroke="currentColor">
+              <path stroke-linecap="round" stroke-linejoin="round" d="M2.25 12 11.204 3.045c.44-.439 1.152-.439 1.591 0L21.75 12M4.5 9.75v10.125c0 .621.504 1.125 1.125 1.125H9.75v-4.875c0-.621.504-1.125 1.125-1.125h2.25c.621 0 1.125.504 1.125 1.125V21h4.125c.621 0 1.125-.504 1.125-1.125V9.75M8.25 21h8.25" />
+            </svg>
+          </div>
+          <h3 class="text-lg font-bold font-display text-surface-900 mb-2">Builder Reviews</h3>
+          <p class="text-sm leading-relaxed text-surface-800/65">
+            Unbiased profiles of 60+ builders — lead times, price ranges, warranty terms, and what past buyers actually say.
+          </p>
+          <p class="mt-4 text-sm font-semibold" style="color: oklch(0.42 0.13 145);">Compare builders →</p>
+        </div>
+
+        <!-- Card 4: True costs -->
+        <div class="group rounded-2xl p-7 border transition-all duration-200 hover:-translate-y-1 hover:shadow-md animate-slide-up delay-400"
+             style="background-color: oklch(0.94 0.018 75); border-color: oklch(0.89 0.018 75);">
+          <div class="w-11 h-11 rounded-xl flex items-center justify-center mb-5" style="background-color: oklch(0.86 0.07 145);">
+            <svg xmlns="http://www.w3.org/2000/svg" class="w-6 h-6" fill="none" viewBox="0 0 24 24" stroke-width="1.8" style="color: oklch(0.42 0.13 145);" stroke="currentColor">
+              <path stroke-linecap="round" stroke-linejoin="round" d="M3.75 3v11.25A2.25 2.25 0 0 0 6 16.5h2.25M3.75 3h-1.5m1.5 0h16.5m0 0h1.5m-1.5 0v11.25A2.25 2.25 0 0 1 18 16.5h-2.25m-7.5 0h7.5m-7.5 0-1 3m8.5-3 1 3m0 0 .5 1.5m-.5-1.5h-9.5m0 0-.5 1.5M9 11.25v1.5M12 9v3.75m3-6v6" />
+            </svg>
+          </div>
+          <h3 class="text-lg font-bold font-display text-surface-900 mb-2">True Costs</h3>
+          <p class="text-sm leading-relaxed text-surface-800/65">
+            What a tiny home really costs in 2025 — purchase, land, hookups, and ongoing — with numbers you can actually use.
+          </p>
+          <p class="mt-4 text-sm font-semibold" style="color: oklch(0.42 0.13 145);">See cost breakdowns →</p>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ═══════════════════════════════════════════════════════
+       HOW IT WORKS
+  ════════════════════════════════════════════════════════════ -->
+  <section id="how-it-works" class="py-20 md:py-28 lg:py-32" style="background-color: oklch(0.94 0.018 75);">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+
+      <div class="max-w-2xl mb-16 animate-slide-up">
+        <p class="text-sm font-semibold uppercase tracking-widest mb-3" style="color: oklch(0.58 0.15 40);">The process</p>
+        <h2 class="text-3xl md:text-4xl font-bold tracking-tight font-display text-surface-900">
+          Go from curious to confident<br>in three steps
+        </h2>
+        <p class="mt-4 text-lg leading-relaxed text-surface-800/60">
+          Tiny home decisions are big ones. Nestled gives you a clear path from "I'm wondering" to "I'm ready."
+        </p>
+      </div>
+
+      <div class="grid grid-cols-1 md:grid-cols-3 gap-10 relative">
+
+        <!-- Connector line (desktop only) -->
+        <div class="hidden md:block absolute top-8 left-1/6 right-1/6 h-px" style="background: linear-gradient(to right, oklch(0.42 0.13 145 / 0.2), oklch(0.42 0.13 145 / 0.4), oklch(0.42 0.13 145 / 0.2));"></div>
+
+        <!-- Step 1 -->
+        <div class="relative animate-slide-up delay-100">
+          <div class="flex items-center gap-4 mb-5">
+            <span class="w-14 h-14 rounded-full flex items-center justify-center text-2xl font-bold font-display text-white shrink-0"
+                  style="background-color: oklch(0.42 0.13 145);">1</span>
+            <div class="h-px flex-1 md:hidden" style="background-color: oklch(0.89 0.018 75);"></div>
+          </div>
+          <h3 class="text-xl font-bold font-display text-surface-900 mb-3">Figure out if it's right for you</h3>
+          <p class="text-base leading-relaxed text-surface-800/65">
+            Start with our honest "Is a tiny home right for me?" guide. It covers lifestyle trade-offs, common surprises, and the questions most people don't think to ask.
+          </p>
+        </div>
+
+        <!-- Step 2 -->
+        <div class="relative animate-slide-up delay-200">
+          <div class="flex items-center gap-4 mb-5">
+            <span class="w-14 h-14 rounded-full flex items-center justify-center text-2xl font-bold font-display text-white shrink-0"
+                  style="background-color: oklch(0.42 0.13 145);">2</span>
+            <div class="h-px flex-1 md:hidden" style="background-color: oklch(0.89 0.018 75);"></div>
+          </div>
+          <h3 class="text-xl font-bold font-display text-surface-900 mb-3">Research your specific situation</h3>
+          <p class="text-base leading-relaxed text-surface-800/65">
+            Look up zoning rules for your county, compare financing options for your income, and narrow down builder choices to those who build where you want to live.
+          </p>
+        </div>
+
+        <!-- Step 3 -->
+        <div class="relative animate-slide-up delay-300">
+          <div class="flex items-center gap-4 mb-5">
+            <span class="w-14 h-14 rounded-full flex items-center justify-center text-2xl font-bold font-display text-white shrink-0"
+                  style="background-color: oklch(0.58 0.15 40);">3</span>
+          </div>
+          <h3 class="text-xl font-bold font-display text-surface-900 mb-3">Move forward with a clear plan</h3>
+          <p class="text-base leading-relaxed text-surface-800/65">
+            Use our checklists and cost calculators to put together a realistic budget and timeline — so your first conversation with a builder is one you're prepared for.
+          </p>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ═══════════════════════════════════════════════════════
+       EDITORIAL CALLOUT / TRUST BLOCK
+  ════════════════════════════════════════════════════════════ -->
+  <section class="py-20 md:py-28 lg:py-32" style="background-color: oklch(0.97 0.015 75);">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="grid grid-cols-1 lg:grid-cols-2 gap-14 items-center">
+
+        <!-- Left: Quote block -->
+        <div class="animate-slide-up">
+          <!-- Big decorative quote mark -->
+          <div class="text-8xl font-display leading-none mb-4 select-none" style="color: oklch(0.86 0.07 145);">"</div>
+          <blockquote class="text-2xl md:text-3xl font-display font-light leading-snug text-surface-900 -mt-10">
+            I spent three months reading forums and blog posts before I found Nestled. It answered in one afternoon what everything else couldn't tell me in weeks.
+          </blockquote>
+          <div class="mt-6 flex items-center gap-3">
+            <div class="w-10 h-10 rounded-full flex items-center justify-center text-white font-bold text-sm" style="background-color: oklch(0.42 0.13 145);">MR</div>
+            <div>
+              <p class="text-sm font-semibold text-surface-900">Maya R.</p>
+              <p class="text-xs text-surface-800/50">Tiny home owner, Colorado</p>
+            </div>
+          </div>
+        </div>
+
+        <!-- Right: Feature list -->
+        <div class="space-y-6 animate-slide-up delay-200">
+          <h2 class="text-3xl font-bold tracking-tight font-display text-surface-900">
+            Practical over pretty.<br>Honest over hype.
+          </h2>
+          <p class="text-lg leading-relaxed text-surface-800/65">
+            Nestled isn't about selling you on a lifestyle. It's about giving you accurate information so you can decide what's right for <em>your</em> life.
+          </p>
+          <ul class="space-y-4">
+            <li class="flex items-start gap-3">
+              <span class="mt-1 w-5 h-5 rounded-full flex items-center justify-center shrink-0" style="background-color: oklch(0.86 0.07 145);">
+                <svg class="w-3 h-3" style="color: oklch(0.42 0.13 145);" viewBox="0 0 12 12" fill="currentColor">
+                  <path d="M10.28 2.28 4 8.56 1.72 6.28a.75.75 0 0 0-1.06 1.06l2.75 2.75a.75.75 0 0 0 1.06 0l6.81-6.81a.75.75 0 0 0-1.06-1.06Z"/>
+                </svg>
+              </span>
+              <span class="text-base text-surface-800/70">No affiliate-driven builder rankings — we call out trade-offs plainly</span>
+            </li>
+            <li class="flex items-start gap-3">
+              <span class="mt-1 w-5 h-5 rounded-full flex items-center justify-center shrink-0" style="background-color: oklch(0.86 0.07 145);">
+                <svg class="w-3 h-3" style="color: oklch(0.42 0.13 145);" viewBox="0 0 12 12" fill="currentColor">
+                  <path d="M10.28 2.28 4 8.56 1.72 6.28a.75.75 0 0 0-1.06 1.06l2.75 2.75a.75.75 0 0 0 1.06 0l6.81-6.81a.75.75 0 0 0-1.06-1.06Z"/>
+                </svg>
+              </span>
+              <span class="text-base text-surface-800/70">Zoning guides updated quarterly — not sourced from 2019 blog posts</span>
+            </li>
+            <li class="flex items-start gap-3">
+              <span class="mt-1 w-5 h-5 rounded-full flex items-center justify-center shrink-0" style="background-color: oklch(0.86 0.07 145);">
+                <svg class="w-3 h-3" style="color: oklch(0.42 0.13 145);" viewBox="0 0 12 12" fill="currentColor">
+                  <path d="M10.28 2.28 4 8.56 1.72 6.28a.75.75 0 0 0-1.06 1.06l2.75 2.75a.75.75 0 0 0 1.06 0l6.81-6.81a.75.75 0 0 0-1.06-1.06Z"/>
+                </svg>
+              </span>
+              <span class="text-base text-surface-800/70">Real cost data from actual builds, not "starting from $45k" marketing copy</span>
+            </li>
+            <li class="flex items-start gap-3">
+              <span class="mt-1 w-5 h-5 rounded-full flex items-center justify-center shrink-0" style="background-color: oklch(0.86 0.07 145);">
+                <svg class="w-3 h-3" style="color: oklch(0.42 0.13 145);" viewBox="0 0 12 12" fill="currentColor">
+                  <path d="M10.28 2.28 4 8.56 1.72 6.28a.75.75 0 0 0-1.06 1.06l2.75 2.75a.75.75 0 0 0 1.06 0l6.81-6.81a.75.75 0 0 0-1.06-1.06Z"/>
+                </svg>
+              </span>
+              <span class="text-base text-surface-800/70">Written by people who've actually gone through the tiny home process</span>
+            </li>
+          </ul>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ═══════════════════════════════════════════════════════
+       TOPICS / POPULAR GUIDE LINKS
+  ════════════════════════════════════════════════════════════ -->
+  <section class="py-20 md:py-24" style="background-color: oklch(0.94 0.018 75);">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="max-w-2xl mb-12 animate-slide-up">
+        <p class="text-sm font-semibold uppercase tracking-widest mb-3" style="color: oklch(0.58 0.15 40);">Start here</p>
+        <h2 class="text-3xl md:text-4xl font-bold tracking-tight font-display text-surface-900">
+          Most-read guides this month
+        </h2>
+      </div>
+      <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-5">
+        <!-- Guide cards -->
+        <a href="#" class="group rounded-2xl p-6 border flex gap-5 items-start transition-all duration-150 hover:-translate-y-0.5 hover:shadow-sm animate-slide-up delay-100"
+           style="background-color: oklch(0.97 0.015 75); border-color: oklch(0.89 0.018 75);">
+          <span class="text-3xl">🏡</span>
+          <div>
+            <h4 class="font-semibold text-surface-900 group-hover:underline decoration-1 underline-offset-2">How much does a tiny home actually cost in 2025?</h4>
+            <p class="text-sm text-surface-800/55 mt-1">Full cost breakdown — build, land, utilities, and ongoing</p>
+          </div>
+        </a>
+        <a href="#" class="group rounded-2xl p-6 border flex gap-5 items-start transition-all duration-150 hover:-translate-y-0.5 hover:shadow-sm animate-slide-up delay-200"
+           style="background-color: oklch(0.97 0.015 75); border-color: oklch(0.89 0.018 75);">
+          <span class="text-3xl">📋</span>
+          <div>
+            <h4 class="font-semibold text-surface-900 group-hover:underline decoration-1 underline-offset-2">Tiny home zoning laws by state — 2025 edition</h4>
+            <p class="text-sm text-surface-800/55 mt-1">Where you can legally park or build your tiny home</p>
+          </div>
+        </a>
+        <a href="#" class="group rounded-2xl p-6 border flex gap-5 items-start transition-all duration-150 hover:-translate-y-0.5 hover:shadow-sm animate-slide-up delay-300"
+           style="background-color: oklch(0.97 0.015 75); border-color: oklch(0.89 0.018 75);">
+          <span class="text-3xl">💰</span>
+          <div>
+            <h4 class="font-semibold text-surface-900 group-hover:underline decoration-1 underline-offset-2">Best tiny home loans: options for every situation</h4>
+            <p class="text-sm text-surface-800/55 mt-1">Personal loans, RV loans, USDA, and more — compared</p>
+          </div>
+        </a>
+        <a href="#" class="group rounded-2xl p-6 border flex gap-5 items-start transition-all duration-150 hover:-translate-y-0.5 hover:shadow-sm animate-slide-up delay-100"
+           style="background-color: oklch(0.97 0.015 75); border-color: oklch(0.89 0.018 75);">
+          <span class="text-3xl">🔨</span>
+          <div>
+            <h4 class="font-semibold text-surface-900 group-hover:underline decoration-1 underline-offset-2">Top tiny home builders — reviewed and ranked</h4>
+            <p class="text-sm text-surface-800/55 mt-1">60+ builders rated on price, quality, and delivery time</p>
+          </div>
+        </a>
+        <a href="#" class="group rounded-2xl p-6 border flex gap-5 items-start transition-all duration-150 hover:-translate-y-0.5 hover:shadow-sm animate-slide-up delay-200"
+           style="background-color: oklch(0.97 0.015 75); border-color: oklch(0.89 0.018 75);">
+          <span class="text-3xl">🌿</span>
+          <div>
+            <h4 class="font-semibold text-surface-900 group-hover:underline decoration-1 underline-offset-2">Is tiny home living right for me? An honest checklist</h4>
+            <p class="text-sm text-surface-800/55 mt-1">The trade-offs nobody talks about — before you commit</p>
+          </div>
+        </a>
+        <a href="#" class="group rounded-2xl p-6 border flex gap-5 items-start transition-all duration-150 hover:-translate-y-0.5 hover:shadow-sm animate-slide-up delay-300"
+           style="background-color: oklch(0.97 0.015 75); border-color: oklch(0.89 0.018 75);">
+          <span class="text-3xl">📐</span>
+          <div>
+            <h4 class="font-semibold text-surface-900 group-hover:underline decoration-1 underline-offset-2">Foundation vs. wheels: which type of tiny home fits you?</h4>
+            <p class="text-sm text-surface-800/55 mt-1">THOW, ADU, park model — differences that affect your finances</p>
+          </div>
         </a>
       </div>
     </div>
   </section>
 
-  <!-- CTA -->
-  <section id="cta" class="py-20 md:py-28">
-    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-      <div class="rounded-2xl bg-brand-500 p-10 md:p-16 text-center">
-        <h2 class="text-3xl md:text-4xl font-bold tracking-tight text-white font-display">Ready to get started?</h2>
-        <p class="mt-4 text-lg text-white/80 max-w-xl mx-auto">Get in touch and see what we can do for you.</p>
-        <a href="mailto:hello@example.com" class="mt-8 inline-block px-8 py-3.5 bg-white text-surface-900 font-semibold rounded-lg hover:bg-surface-100 transition-colors text-base">
-          Contact Us
+  <!-- ═══════════════════════════════════════════════════════
+       FINAL CTA
+  ════════════════════════════════════════════════════════════ -->
+  <section id="cta" class="py-20 md:py-28 lg:py-32 relative overflow-hidden">
+    <!-- Background: deep forest green with warm glow -->
+    <div class="absolute inset-0" style="background:
+      radial-gradient(ellipse at 25% 50%, oklch(0.55 0.13 145 / 0.35), transparent 60%),
+      radial-gradient(ellipse at 80% 30%, oklch(0.58 0.15 40 / 0.20), transparent 55%),
+      linear-gradient(135deg, oklch(0.34 0.11 145), oklch(0.28 0.10 145));
+    "></div>
+
+    <div class="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+      <p class="text-sm font-semibold uppercase tracking-widest text-white/60 mb-4 animate-slide-up">
+        Your guide to living small, living well
+      </p>
+      <h2 class="text-4xl md:text-5xl font-bold tracking-tight font-display text-white max-w-2xl mx-auto leading-tight animate-slide-up delay-100">
+        Stop guessing. Start reading the guides that actually help.
+      </h2>
+      <p class="mt-6 text-lg text-white/70 max-w-xl mx-auto leading-relaxed animate-slide-up delay-200">
+        Every piece of information you need to decide, plan, and move forward — in one place, free to access.
+      </p>
+      <div class="mt-10 flex flex-col sm:flex-row gap-4 justify-center animate-slide-up delay-300">
+        <a href="#guides"
+           class="inline-block px-9 py-4 rounded-xl font-semibold text-base transition-colors duration-150"
+           style="background-color: oklch(0.58 0.15 40); color: white;"
+           onmouseover="this.style.backgroundColor='oklch(0.48 0.14 40)'"
+           onmouseout="this.style.backgroundColor='oklch(0.58 0.15 40)'">
+          Browse all guides
+        </a>
+        <a href="#guides"
+           class="inline-block px-9 py-4 rounded-xl font-semibold text-base border-2 text-white transition-colors duration-150"
+           style="border-color: rgba(255,255,255,0.25);"
+           onmouseover="this.style.backgroundColor='rgba(255,255,255,0.08)'"
+           onmouseout="this.style.backgroundColor='transparent'">
+          Start with costs
         </a>
       </div>
+      <p class="mt-5 text-sm text-white/40 animate-slide-up delay-400">
+        Free forever. No sign-up, no paywall.
+      </p>
     </div>
   </section>
+
 </Base>
