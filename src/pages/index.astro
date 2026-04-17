@@ -21,7 +21,8 @@ import Base from '../layouts/Base.astro';
     <!-- Subtle texture overlay lines (decorative) -->
     <div class="absolute inset-0 opacity-[0.025]" style="background-image: repeating-linear-gradient(0deg, oklch(0.20 0.018 75) 0px, transparent 1px, transparent 48px);"></div>
 
-    <div class="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-24 md:py-32">
+    <div class="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 pt-24 md:pt-32 pb-16 md:pb-20">
+      <!-- Hero text block -->
       <div class="max-w-3xl">
         <!-- Eyebrow -->
         <p class="inline-flex items-center gap-2 text-sm font-semibold uppercase tracking-widest text-accent-500 mb-6 animate-slide-up" style="color: oklch(0.58 0.15 40);">
@@ -64,8 +65,8 @@ import Base from '../layouts/Base.astro';
         </p>
       </div>
 
-      <!-- Floating stat cards — right side on large screens -->
-      <div class="hidden lg:flex flex-col gap-4 absolute right-8 top-1/2 -translate-y-1/2 animate-fade-in delay-500">
+      <!-- Stat cards row — sits below hero text, full-width -->
+      <div class="mt-16 grid grid-cols-1 sm:grid-cols-3 gap-4 animate-fade-in delay-500">
         <div class="rounded-2xl px-6 py-5 shadow-sm border" style="background: oklch(0.97 0.015 75 / 0.95); border-color: oklch(0.89 0.018 75);">
           <p class="text-3xl font-bold font-display" style="color: oklch(0.42 0.13 145);">200+</p>
           <p class="text-sm text-surface-800/60 mt-0.5">in-depth guides</p>
